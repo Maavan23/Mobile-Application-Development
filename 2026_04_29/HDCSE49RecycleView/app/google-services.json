@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "611424337428",
+    "project_id": "hdcse49recycleview",
+    "storage_bucket": "hdcse49recycleview.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611424337428:android:42488c8b8af50806cb3101",
+        "android_client_info": {
+          "package_name": "com.example.hdcse49recycleview"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMvMeLvaQenOrWZDVYBNjfgMECmd2A4vA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
