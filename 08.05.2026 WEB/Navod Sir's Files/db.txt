@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UI Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .navbar {
+      background-color: #0d1b2a;
+    }
+    .hero {
+      background-color: #0d1b2a;
+      color: white;
+      padding: 100px 0;
+    }
+    .hero h1 {
+      font-size: 3rem;
+    }
+    .btn-custom {
+      border-radius: 25px;
+      padding: 10px 30px;
+    }
+    .about-img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 10px;
+    }
+    .stats {
+      background-color: #f8f9fa;
+      padding: 40px 0;
+    }
+    .projects img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #0d1b2a;
+      color: white;
+      padding: 30px 0;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">UI Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="btn btn-success btn-custom ms-2" href="#contact">Hire Me</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero text-center text-lg-start">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Side Image -->
+      <div class="col-lg-6">
+        <h5>Hi, I'm John Watson</h5>
+        <h1><strong>Freelancer</strong></h1>
+        <p class="mb-4">I love Graphic Design and Photography and have been working on my portfolio since 2016.</p>
+        <a href="#contact" class="btn btn-success btn-custom me-2">Hire Me</a>
+        <a href="#projects" class="btn btn-outline-light btn-custom">My Portfolio</a>
+      </div>
+      <!-- Right Side Content -->
+      <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+        <img src="https://www.springboard.com/blog/wp-content/uploads/2022/03/what-is-a-coding-project.png" class="rounded-circle shadow-lg img-fluid" alt="Profile Image" style="max-width: 250px;">
+      </div>
+     
+    </div>
+  </div>
+</section>
+
+
+<!-- About Section -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-5 text-center">
+        <img src="https://www.springboard.com/blog/wp-content/uploads/2022/03/what-is-a-coding-project.png" alt="John Watson" class="about-img">
+      </div>
+      <div class="col-md-7">
+        <h3>A Lead UI Designer & Web Developer Based in UK</h3>
+        <p>I love Graphic design and Photography and have been working on my portfolio since 2016. I can give your business a new creative start right away!</p>
+        <p><strong>Name:</strong> John Watson</p>
+        <p><strong>Email:</strong> example@mail.com</p>
+        <p><strong>Phone:</strong> +21 234 567 8901</p>
+        <p><strong>From:</strong> London, UK</p>
+        <div class="mb-3">
+          <button href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success btn-custom me-2">Hire Me</button>
+          <a href="#" class="btn btn-outline-dark btn-custom">Download CV</a>
+          <!-- Button trigger modal -->
+          <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+          </button> -->
+        </div>
+        <div>
+          <a href="#" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+          <a href="#" class="me-3"><i class="fab fa-behance fa-lg"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">What I Do</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-code fa-2x mb-3 text-success"></i>
+        <h5>Web Development</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-paint-brush fa-2x mb-3 text-success"></i>
+        <h5>Design Trends</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-headset fa-2x mb-3 text-success"></i>
+        <h5>Customer Support</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-search fa-2x mb-3 text-success"></i>
+        <h5>Research & Analysis</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-mobile-alt fa-2x mb-3 text-success"></i>
+        <h5>Responsive Design</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-file-image fa-2x mb-3 text-success"></i>
+        <h5>PSD Design</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Stats Section -->
+<section class="stats text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3"><h3>1350</h3><p>Finished Projects</p></div>
+      <div class="col-md-3"><h3>2250</h3><p>Working Hours</p></div>
+      <div class="col-md-3"><h3>1146</h3><p>Online Support</p></div>
+      <div class="col-md-3"><h3>2703</h3><p>Happy Customers</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-5 projects">
+  <div class="container">
+    <h2 class="text-center mb-5">My Success Work</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><img src="https://www.springboard.com/blog/wp-content/uploads/2022/03/what-is-a-coding-project.png" alt="Project 1"></div>
+      <div class="col-md-4"><img src="https://www.springboard.com/blog/wp-content/uploads/2022/03/what-is-a-coding-project.png" alt="Project 2"></div>
+      <div class="col-md-4"><img src="https://www.springboard.com/blog/wp-content/uploads/2022/03/what-is-a-coding-project.png" alt="Project 3"></div>
+      <div class="col-md-4"><img src="https://www.springboard.com/blog/wp-content/uploads/2022/03/what-is-a-coding-project.png" alt="Project 4"></div>
+      <div class="col-md-4"><img src="https://www.springboard.com/blog/wp-content/uploads/2022/03/what-is-a-coding-project.png" alt="Project 5"></div>
+      <div class="col-md-4"><img src="https://www.springboard.com/blog/wp-content/uploads/2022/03/what-is-a-coding-project.png" alt="Project 6"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Contact Me</h2>
+    <div class="row g-4 align-items-stretch">
+      
+      <!-- Left: Google Map -->
+      <div class="col-md-6 d-flex">
+        <div class="w-100">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609956343!2d72.74109855879299!3d19.082197838674026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63b7b77cb9f%3A0x56ed38c0c43b6e1a!2sMumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2s!4v1600000000000!5m2!1sen!2s" 
+            width="100%" 
+            height="100%" 
+            style="border:0; min-height: 100%;" 
+            allowfullscreen="" 
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="col-md-6 d-flex">
+        <div class="bg-white p-4 shadow-sm w-100">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Write your message here..." required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-success btn-custom">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <div class="container">
+    <p>&copy; 2025 UI Portfolio. All Rights Reserved. | Design by <a href="#">Willys</a></p>
+    <p><i class="fas fa-envelope"></i> help@example.com | <i class="fas fa-phone"></i> +123 456 678 900</p>
+    <p><i class="fas fa-map-marker-alt"></i> 200 Avenue Street, UK - 62821</p>
+  </div>
+</footer>
+
+<!-- models -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

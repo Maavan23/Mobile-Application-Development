@@ -1,0 +1,59 @@
+Reviewing the current login, register, and db config files before applying the database integration.
+
+Read [](file:///c%3A/wamp64/www/TestWebAppNova/login.php)
+
+Read [](file:///c%3A/wamp64/www/TestWebAppNova/register.php)
+
+Read [](file:///c%3A/wamp64/www/TestWebAppNova/config/db.php)
+
+Updating db.php, login.php, and register.php so login and registration use the `users_db` customer table.
+
+Replacing 70 lines with 137 lines in [](file:///c%3A/wamp64/www/TestWebAppNova/config/db.php), [](file:///c%3A/wamp64/www/TestWebAppNova/login.php), [](file:///c%3A/wamp64/www/TestWebAppNova/register.php)
+
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+Verifying the updated login/register code and DB config before I summarize the exact changes.
+
+Read [](file:///c%3A/wamp64/www/TestWebAppNova/login.php#1-1), lines 1 to 40
+
+Read [](file:///c%3A/wamp64/www/TestWebAppNova/register.php#1-1), lines 1 to 80
+
+## Done
+
+Integrated login and registration with the `users_db` database and the `customer` table.
+
+### What changed
+
+- db.php
+  - changed `$dbname` from `employee_db` to `users_db`
+
+- login.php
+  - added `include 'config/db.php';`
+  - changed login check from hardcoded admin credentials to a DB query:
+    - `SELECT password FROM customer WHERE username = ?`
+  - now validates the submitted email/password against the `customer` table
+  - added session redirect to dashboard.php when already logged in
+
+- register.php
+  - added `include 'config/db.php';`
+  - added validation for email, password, and password confirmation
+  - checks if the email already exists in `customer`
+  - inserts new users into `customer (username, password)`
+  - added success and error messages on the registration page
+  - removed the unused `full_name` field from registration so it matches the `customer` table layout
+
+### Notes
+- This uses the `username` column in `customer` as the login email.
+- Passwords are stored and compared in plain text to match your existing `customer` data. If you want, I can also upgrade it to use `password_hash()` safely.
+
+Made changes.
