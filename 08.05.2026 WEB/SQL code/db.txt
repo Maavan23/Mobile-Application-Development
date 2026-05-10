@@ -1,0 +1,59 @@
+-- Create the database if it doesn't exist
+CREATE DATABASE IF NOT EXISTS employee_db;
+USE employee_db;
+
+-- Create the employees table
+CREATE TABLE IF NOT EXISTS employees (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    employee_id VARCHAR(50) NOT NULL UNIQUE,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    department VARCHAR(100),
+    availability TINYINT(1) DEFAULT 1, -- 1 for Available, 0 for Unavailable
+    address TEXT,
+    joining_date DATE,
+    shift_time VARCHAR(50),
+    skills TEXT,
+    notes TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO employees (employee_id, name, email, department, availability, address, joining_date, shift_time, skills, notes)
+VALUES 
+('EMP001', 'John Doe', 'john@example.com', 'IT', 1, '123 Tech Lane', '2023-01-15', '09:00 - 17:00', 'PHP, MySQL', 'Lead Developer'),
+('EMP002', 'Jane Smith', 'jane@example.com', 'HR', 1, '456 People St', '2023-02-20', '08:00 - 16:00', 'Recruiting', 'Senior Manager'),
+('EMP003', 'Mike Ross', 'mike@example.com', 'Legal', 0, '789 Law Blvd', '2023-03-10', '10:00 - 18:00', 'Research', 'Part-time');
+
+
+INSERT INTO employees (employee_id, name, email, department, availability, address, joining_date, shift_time, skills, notes)
+VALUES 
+('EMP004', 'Alice Thompson', 'alice.t@example.com', 'Marketing', 1, '12 Maple St', '2023-04-01', '09:00 - 17:00', 'SEO, Content Strategy', 'Creative lead'),
+('EMP005', 'Bob Wilson', 'bob.w@example.com', 'Engineering', 1, '88 Oak Ave', '2023-04-15', '10:00 - 18:00', 'Python, AWS', 'Remote worker'),
+('EMP006', 'Charlie Davis', 'charlie.d@example.com', 'Sales', 0, '43 Birch Rd', '2023-05-10', '09:00 - 17:00', 'Negotiation', 'On medical leave'),
+('EMP007', 'Diana Prince', 'diana.p@example.com', 'Legal', 1, '101 Justice Ln', '2023-06-01', '08:00 - 16:00', 'Corporate Law', 'Senior Counsel'),
+('EMP008', 'Edward Norton', 'edward.n@example.com', 'IT', 1, '55 Tech Plaza', '2023-06-20', '22:00 - 06:00', 'Cybersecurity', 'Night shift lead'),
+('EMP009', 'Fiona Gallagher', 'fiona.g@example.com', 'Finance', 1, '22 Budget St', '2023-07-05', '09:00 - 17:00', 'Accounting, Excel', 'Punctual'),
+('EMP010', 'George Miller', 'george.m@example.com', 'Engineering', 1, '90 Steam Rd', '2023-07-22', '09:00 - 17:00', 'React, Node.js', 'Fullstack dev'),
+('EMP011', 'Hannah Abbott', 'hannah.a@example.com', 'HR', 1, '15 Garden Way', '2023-08-12', '09:00 - 17:00', 'Onboarding', 'Very friendly'),
+('EMP012', 'Ian Wright', 'ian.w@example.com', 'Marketing', 0, '77 Stadium Dr', '2023-08-30', '09:00 - 17:00', 'Social Media', 'Contractor'),
+('EMP013', 'Jenny Slate', 'jenny.s@example.com', 'Sales', 1, '34 Comedy Blvd', '2023-09-15', '09:00 - 17:00', 'Cold Calling', 'High performer'),
+('EMP014', 'Kevin Hart', 'kevin.h@example.com', 'IT', 1, '12 Short St', '2023-10-01', '09:00 - 17:00', 'Hardware Repair', 'Helpdesk'),
+('EMP015', 'Laura Palmer', 'laura.p@example.com', 'Finance', 1, '7 Peak Rd', '2023-10-18', '09:00 - 17:00', 'Auditing', 'Detailed oriented'),
+('EMP016', 'Michael Scott', 'michael.s@example.com', 'Management', 1, '1725 Slough Ave', '2023-11-01', '09:00 - 17:00', 'Leadership', 'Regional Manager'),
+('EMP017', 'Nina Simone', 'nina.s@example.com', 'Marketing', 1, '44 Jazz St', '2023-11-20', '11:00 - 19:00', 'Brand Design', 'Artist'),
+('EMP018', 'Oscar Isaac', 'oscar.i@example.com', 'Engineering', 1, '99 Space Way', '2023-12-05', '09:00 - 17:00', 'Embedded Systems', 'Hard worker'),
+('EMP019', 'Pam Beesly', 'pam.b@example.com', 'HR', 1, '120 Paper St', '2023-12-28', '09:00 - 17:00', 'Administration', 'Office Admin'),
+('EMP020', 'Quentin Tarantino', 'quentin.t@example.com', 'Marketing', 0, '10 Director Dr', '2024-01-10', '13:00 - 21:00', 'Video Editing', 'Creative'),
+('EMP021', 'Riley Reid', 'riley.r@example.com', 'Sales', 1, '55 Sunset Blvd', '2024-01-25', '09:00 - 17:00', 'Closing', 'Top Tier'),
+('EMP022', 'Steven Strange', 'steven.s@example.com', 'Legal', 1, '177A Bleecker St', '2024-02-14', '08:00 - 16:00', 'Negotiation', 'Expert'),
+('EMP023', 'Tina Fey', 'tina.f@example.com', 'IT', 1, '30 Rock Plaza', '2024-02-28', '09:00 - 17:00', 'System Admin', 'Reliable'),
+('EMP024', 'Ursula Dittman', 'ursula.d@example.com', 'Finance', 1, '67 Ocean Ave', '2024-03-12', '09:00 - 17:00', 'Tax Law', 'Precise'),
+('EMP025', 'Victor Von Doom', 'victor.v@example.com', 'Engineering', 0, '1 Latveria Ln', '2024-03-30', '09:00 - 17:00', 'Robotics', 'High IQ'),
+('EMP026', 'Wanda Maximoff', 'wanda.m@example.com', 'Marketing', 1, '202 Westview', '2024-04-10', '09:00 - 17:00', 'Copywriting', 'Imaginative'),
+('EMP027', 'Xavier Charles', 'xavier.c@example.com', 'Management', 1, '1407 Graymalkin Ln', '2024-04-25', '09:00 - 17:00', 'Strategy', 'Dean'),
+('EMP028', 'Yara Greyjoy', 'yara.g@example.com', 'Sales', 1, '5 Iron Island', '2024-05-05', '07:00 - 15:00', 'Logistics', 'Fast-paced'),
+('EMP029', 'Zack Morris', 'zack.m@example.com', 'Marketing', 1, '22 Bayside Dr', '2024-05-20', '09:00 - 17:00', 'Networking', 'Charismatic'),
+('EMP030', 'Arthur Dent', 'arthur.d@example.com', 'IT', 0, '42 Galaxy Way', '2024-06-01', '09:00 - 17:00', 'Data Entry', 'A bit lost'),
+('EMP031', 'Bruce Wayne', 'bruce.w@example.com', 'Management', 1, '1007 Mountain Dr', '2024-06-15', '20:00 - 04:00', 'Investments', 'Philanthropist'),
+('EMP032', 'Clark Kent', 'clark.k@example.com', 'Marketing', 1, '344 Clinton St', '2024-07-01', '09:00 - 17:00', 'Journalism', 'Fast worker'),
+('EMP033', 'Diana Prince', 'diana.p2@example.com', 'Legal', 1, 'Gateway City', '2024-07-10', '08:00 - 16:00', 'International Law', 'Strong lead');
